@@ -16,13 +16,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-6 w-6 text-gray-600 hover:text-primary" />
+                <Github className="h-6 w-6 text-gray-600 hover:text-primary-500" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-6 w-6 text-gray-600 hover:text-primary" />
+                <Twitter className="h-6 w-6 text-gray-600 hover:text-primary-500" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <Linkedin className="h-6 w-6 text-gray-600 hover:text-primary" />
+                <Linkedin className="h-6 w-6 text-gray-600 hover:text-primary-500" />
               </a>
             </div>
           </div>
@@ -32,17 +32,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/events" className="text-gray-600 hover:text-primary">
+                <Link href="/events" className="text-gray-600 hover:text-primary-500">
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-primary">
+                <Link href="/about" className="text-gray-600 hover:text-primary-500">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/join" className="text-gray-600 hover:text-primary">
+                <Link href="/join" className="text-gray-600 hover:text-primary-500">
                   Join Us
                 </Link>
               </li>
