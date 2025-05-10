@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import React from 'react';
 
 interface YouTubePreviewProps {
   videoId: string;
@@ -11,44 +10,28 @@ interface YouTubePreviewProps {
 
 export default function YouTubePreview({ videoId, title, description }: YouTubePreviewProps) {
   return (
-    <section className="py-16 bg-white dark:bg-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-dark dark:text-white mb-12">
-          Latest from Wiki Club
-        </h2>
-
-        <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold mb-8">Latest from Wiki Club</h2>
+        <div className="aspect-w-16 aspect-h-9 mb-6">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}`}
             title={title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="absolute inset-0 w-full h-full"
+            className="w-full h-64 md:h-96 rounded-lg border-none"
           />
         </div>
-
-        <div className="mt-6 text-center">
-          <h3 className="text-xl font-semibold text-dark dark:text-white mb-2">
-            {title}
-          </h3>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {description}
-          </p>
-        </div>
-
-        <div className="mt-8 text-center">
-          <motion.a
-            href="https://youtube.com/@wikiclubsati"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-          >
-            <Play className="w-5 h-5 mr-2" />
-            Subscribe to Our Channel
-          </motion.a>
-        </div>
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <a
+          href="https://www.youtube.com/@wikiclubsati"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-2 rounded bg-primary-500 text-white font-semibold hover:bg-primary-600 transition"
+        >
+          Subscribe
+        </a>
       </div>
     </section>
   );
