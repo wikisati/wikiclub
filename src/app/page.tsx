@@ -36,7 +36,7 @@ const events = [
     date: "March 25, 2024",
     location: "SATI Campus",
     attendees: 50,
-    image: "/images/events/web-dev.jpg",
+    image: "https://placehold.co/600x400/349b64/ffffff?text=Web+Dev+Workshop",
     description: "Learn modern web development with Next.js and React.",
   },
   {
@@ -45,7 +45,7 @@ const events = [
     date: "April 5, 2024",
     location: "Online",
     attendees: 75,
-    image: "/images/events/ai-ml.jpg",
+    image: "https://placehold.co/600x400/349b64/ffffff?text=AI+ML+Workshop",
     description: "Introduction to Machine Learning and AI concepts.",
   },
 ];

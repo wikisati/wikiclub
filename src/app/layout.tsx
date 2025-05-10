@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
@@ -19,8 +19,12 @@ export const metadata: Metadata = {
   description: "Official website of Wiki Club SATI - Empowering knowledge sharing and collaboration",
   keywords: ["Wiki Club", "SATI", "Knowledge Sharing", "Student Club"],
   authors: [{ name: "Wiki Club SATI" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -30,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="min-h-screen bg-white dark:bg-dark text-dark dark:text-white">
+      <body className="min-h-screen bg-gray-50 text-gray-900">
         {children}
       </body>
     </html>
